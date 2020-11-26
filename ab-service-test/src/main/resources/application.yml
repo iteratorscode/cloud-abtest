@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: AB-SERVICE-TEST
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+server:
+  port: 8081
+logging:
+  level:
+    org.springframework: TRACE
