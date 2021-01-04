@@ -7,3 +7,7 @@ spring:
         namespace: 47c0643a-0b4f-4a7b-a907-7e203ed677a9
         group: service
         name: com.iterators.ab.service.test
+        shared-configs:
+          - dataId: com.iterators.ab.service.common.yaml
+            group: common
+            refresh: true
