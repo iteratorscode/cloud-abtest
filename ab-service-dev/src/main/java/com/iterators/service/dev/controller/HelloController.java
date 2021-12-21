@@ -1,10 +1,7 @@
 package com.iterators.service.dev.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 测试
@@ -18,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @GetMapping("/red/{id}")
-    public String red(@PathVariable String id) {
+    public String red(@PathVariable String id, @RequestHeader("tag") String tag) {
 
-        return "Form dev service red " + id;
+        return "Form dev service red " + id + " : " + tag;
     }
 
     @GetMapping("/blue/{id}")

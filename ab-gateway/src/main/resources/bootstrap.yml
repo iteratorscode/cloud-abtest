@@ -3,8 +3,17 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
-        namespace: 3af790bb-27b8-44ed-92a4-571f1b0a4059
+        namespace: 47c0643a-0b4f-4a7b-a907-7e203ed677a9
         group: service
-        service: gateway
+        service: ${spring.application.name}
+        metadata:
+          tag: gateway
+      config:
+        file-extension: yaml
+        namespace: 47c0643a-0b4f-4a7b-a907-7e203ed677a9
+        group: DEFAULT_GROUP
+        name: gateway
+        username: nacos
+        password: nacos
   application:
     name: gateway
